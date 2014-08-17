@@ -24,6 +24,7 @@ Sugar trail icon for the sugarlistens program
 
 %install
 mkdir -p $RPM_BUILD_ROOT/usr/share/sugar/extensions/deviceicon/
+cp -r  $RPM_BUILD_DIR/%{name}-%{version}/speech $RPM_BUILD_ROOT/usr/share/sugar/extensions/deviceicon/
 install -m644 $RPM_BUILD_DIR/%{name}-%{version}/listen.py $RPM_BUILD_ROOT/usr/share/sugar/extensions/deviceicon/
 
 mkdir -p $RPM_BUILD_ROOT/usr/share/icons/sugar/scalable/device
@@ -43,3 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/sugar/extensions/deviceicon/listen.py
 /usr/share/sugar/extensions/deviceicon/listen.pyc
 /usr/share/sugar/extensions/deviceicon/listen.pyo
+/usr/share/sugar/extensions/deviceicon/speech/en/dictionary.dic
+/usr/share/sugar/extensions/deviceicon/speech/en/language.fsg
+/usr/share/sugar/extensions/deviceicon/speech/en/language.gram
